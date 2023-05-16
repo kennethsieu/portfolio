@@ -1,0 +1,58 @@
+body {
+    background-color: #f8dade;
+}
+
+.overLayer {
+    width: 90%;
+    margin: auto;
+    padding: 3vh;
+}
+
+.Introduction {
+    background-image: linear-gradient(#CD8B94, #2b2929) ;
+    display: flex;
+    flex-direction: horizontal;
+    flex: start;
+    padding: 2vw;
+}
+
+.kennethpng {
+    width: 28vw;
+    margin-right: 5vh;
+  }
+
+.introText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.hello {
+    font-family: 'Oswald', sans-serif;
+    color: #FAF9F6;
+    font-size: 6vw;
+
+}
+
+.intro {
+    font-family: 'Oswald', sans-serif;
+    color: #FAF9F6;
+    font-size: 2.5vw;
+    font-weight: 600;
+}
+
+.demoReel {
+    background-color: #2b2929;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3vw;
+}
+
+.demoReelTitle {
+    font-family: 'Oswald', sans-serif;
+    color: #FAF9F6;
+    font-size: 4vw;
+    margin-bottom: 2vw;
+}
