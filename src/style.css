@@ -1,13 +1,14 @@
 body {
-    background-color: #f8dade;
+    background-color: #323131;
 }
 
 .overLayer {
     width: 90%;
     margin: auto;
-    padding: 3vh;
+    padding: 3vw;
 }
 
+/* Introduction Page */
 .Introduction {
     background-image: linear-gradient(#CD8B94, #2b2929) ;
     display: flex;
@@ -18,7 +19,7 @@ body {
 
 .kennethpng {
     width: 28vw;
-    margin-right: 5vh;
+    margin-right: 5vw;
   }
 
 .introText {
@@ -41,8 +42,10 @@ body {
     font-weight: 600;
 }
 
+/* Demo Reel */
 .demoReel {
-    background-color: #2b2929;
+    background-image: linear-gradient(#2b2929,black);
+    height: 55vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -54,5 +57,723 @@ body {
     font-family: 'Oswald', sans-serif;
     color: #FAF9F6;
     font-size: 4vw;
-    margin-bottom: 2vw;
+    margin-bottom: 5vw;
 }
+
+.iframe {
+    width: 60%;
+    height: 120vw;
+    margin-bottom: 10vw;
+}
+
+/*Twilight Market Intro*/
+.TwilightMarket {
+    background-color: rgb(94, 74, 94);
+    
+}
+
+.image-stack {
+    display: grid;
+    position: relative;
+}
+
+
+.main {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    z-index: 4;
+}
+
+.twilightimg {
+    width: 100%;
+}
+
+@keyframes foganimation {
+    0%, 50%, 100% {transform: translateX(5vw);}
+    25% {transform: translate(10vw);}
+    75% {transform: translate(0);}
+}
+
+.fog1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 1;
+    animation: foganimation 10s linear infinite;
+}
+
+.fog2 {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 2;
+    animation: foganimation 8s linear reverse infinite;
+}
+
+.fog3 {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 3;
+    animation: foganimation 7s linear alternate infinite;
+}
+
+.shimmer1 {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 5;
+    animation: shimmerframes .25s 0s infinite;
+}
+
+
+.scroll_down {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 7;
+
+}
+
+/* MacCollie interaction */
+.macCollie {
+    background-color: rgb(94, 74, 94);
+}
+
+@keyframes idle {
+    0% {transform:translateY(0)}
+    100% {transform:translateY(-1vw)}
+}
+
+@keyframes idleface {
+    0% {transform: translateY(-4vw)}
+    100% {transform: translateY(-5vw)}
+}
+
+@keyframes idleangryface {
+    0% {transform: translateY(-2vw)}
+    100% {transform: translateY(-3vw)}
+}
+
+@keyframes talking {
+    0% {transform: translateY(-4vw)}
+    100% {transform: translateY(-3.25vw)}
+}
+
+@keyframes angrytalking {
+    0% {transform: translateY(-2vw)}
+    100% {transform: translateY(-1.25vw)}
+}
+
+.image-stack-mcCollie {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(24, 2vw);
+}
+
+.bod {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 5;
+    animation: idle 2.5s linear alternate infinite;
+}
+
+.jaw {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 5;
+    animation: idleface 2s linear alternate infinite;
+}
+
+.angryjaw {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 5;
+    animation: idleangryface 2s linear alternate infinite;
+}
+
+.jawtalking {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 5;
+    animation: talking .2s linear alternate infinite;
+}
+
+.angryjawtalking {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 5;
+    animation: angrytalking .25s linear alternate infinite;
+}
+
+.head {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 5;
+    animation: idleface 2s linear alternate infinite;
+}
+
+.angryhead {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 5;
+    animation: idleangryface 2s linear alternate infinite;
+}
+
+/* Dialogue elemeents */
+.mcCollieText {
+    font-family: 'Shadows Into Light', cursive;
+    color: #FAF9F6;
+    font-size: 2.5vw;
+}
+
+.startbutton {
+    grid-column: 15 / span 17;
+    grid-row: 12 / span 2;
+    z-index: 10;
+    font-family: 'Shadows Into Light', cursive;
+    color: #FAF9F6;
+    font-size: 2vw;
+    background-color: #2b2929;
+    opacity: 50%;
+}
+
+.startbutton:hover {
+    opacity: 100%;
+}
+
+.what {
+    grid-column: 15 / span 17;
+    grid-row: 5 / span 2;
+    z-index: 10;
+    font-family: 'Shadows Into Light', cursive;
+    color: #FAF9F6;
+    font-size: 2vw;
+    background-color: #2b2929;
+    opacity: 50%;
+}
+
+.what:hover {
+    opacity: 100%;
+}
+
+.work {
+    grid-column: 15 / span 17;
+    grid-row: 7 / span 2;
+    z-index: 10;
+    font-family: 'Shadows Into Light', cursive;
+    color: #FAF9F6;
+    font-size: 2vw;
+    background-color: #2b2929;
+    opacity: 50%;
+}
+
+.work:hover {
+    opacity: 100%;
+}
+
+.artist{
+    grid-column: 15 / span 17;
+    grid-row: 9 / span 2;
+    z-index: 10;
+    font-family: 'Shadows Into Light', cursive;
+    color: #FAF9F6;
+    font-size: 2vw;
+    background-color: #2b2929;
+    opacity: 50%;
+}
+
+.artist:hover {
+    opacity: 100%;
+}
+
+.finsihed{
+    grid-column: 15 / span 17;
+    grid-row: 11 / span 2;
+    z-index: 10;
+    font-family: 'Shadows Into Light', cursive;
+    color: #FAF9F6;
+    font-size: 2vw;
+    background-color: #2b2929;
+    opacity: 50%;
+}
+
+.finsihed:hover {
+    opacity: 100%;
+}
+
+.others{
+    grid-column: 15 / span 17;
+    grid-row: 13 / span 4;
+    z-index: 10;
+    font-family: 'Shadows Into Light', cursive;
+    color: #FAF9F6;
+    font-size: 2vw;
+    background-color: #2b2929;
+    opacity: 50%;
+}
+
+.others:hover {
+    opacity: 100%;
+}
+
+.engine{
+    grid-column: 15 / span 17;
+    grid-row: 17 / span 2;
+    z-index: 10;
+    font-family: 'Shadows Into Light', cursive;
+    color: #FAF9F6;
+    font-size: 2vw;
+    background-color: #2b2929;
+    opacity: 50%;
+}
+
+.engine:hover {
+    opacity: 100%;
+}
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+.McCollieIntro {
+    grid-column: 1 / span 14;
+    grid-row: 21 / span 2;
+    z-index: 10;
+    font-family: 'Shadows Into Light', cursive;
+    color: #FAF9F6;
+    font-size: 2vw;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 4s steps(80, end);
+}
+
+.whatanswer {
+    grid-column: 1 / span 14;
+    grid-row: 21 / span 2;
+    z-index: 10;
+    font-family: 'Shadows Into Light', cursive;
+    color: #FAF9F6;
+    font-size: 2vw;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 4s steps(80, end);
+}
+
+.workanswer {
+    grid-column: 1 / span 14;
+    grid-row: 21 / span 2;
+    z-index: 10;
+    font-family: 'Shadows Into Light', cursive;
+    color: #FAF9F6;
+    font-size: 2vw;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 4s steps(80, end);
+}
+
+.artistanswer {
+    grid-column: 1 / span 14;
+    grid-row: 21 / span 2;
+    z-index: 10;
+    font-family: 'Shadows Into Light', cursive;
+    color: #FAF9F6;
+    font-size: 2vw;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 4s steps(80, end);
+}
+
+.finishedanswer {
+    grid-column: 1 / span 14;
+    grid-row: 21 / span 2;
+    z-index: 10;
+    font-family: 'Shadows Into Light', cursive;
+    color: #FAF9F6;
+    font-size: 2vw;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 4s steps(80, end);
+}
+
+.otheranswer {
+    grid-column: 1 / span 14;
+    grid-row: 21 / span 2;
+    z-index: 10;
+    font-family: 'Shadows Into Light', cursive;
+    color: #FAF9F6;
+    font-size: 2vw;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 4s steps(80, end);
+}
+
+.engineanswer {
+    grid-column: 1 / span 14;
+    grid-row: 21 / span 2;
+    z-index: 10;
+    font-family: 'Shadows Into Light', cursive;
+    color: #FAF9F6;
+    font-size: 2vw;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 4s steps(80, end);
+}
+
+/* Operation: Spyfx */
+.operationSpyfx {
+    height: 45vw;
+    background-color: black;
+}
+
+.image-stack-spy {
+    display: grid;
+    position: relative;
+    grid-template-rows: repeat(15, 3vw);
+    
+}
+
+.scanlines {
+    overflow: hidden;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    height: 45vw;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 3;
+  }
+  
+.scanlines::before {
+  content: "";
+  width: 100%;
+  height: 45vw;
+  position: absolute;
+
+  
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) .5%,
+    transparent 1%
+  );
+  
+  animation: fudge 7s ease-in-out alternate infinite;
+  pointer-events: none; 
+}
+
+@keyframes glitch-2 {
+    1%{
+      transform: rotateX(10deg) skewX(70deg);
+    }
+    2%{
+      transform: rotateX(0deg) skewX(0deg);
+    }
+  }
+
+.prefix {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 4vw;
+    color: rgba(165, 141, 141, .4);
+    text-transform: uppercase;
+    letter-spacing: 1em;
+    text-align: center;
+    margin-left: 6vw;
+    animation: glitch-2 5s 5.02s infinite;
+    grid-column: 1;
+    grid-row: 4;
+    z-index: 2;
+  }
+
+  @keyframes glitch {
+    1%{
+      transform: rotateX(10deg) skewX(90deg);
+    }
+    2%{
+      transform: rotateX(0deg) skewX(0deg);
+    }
+  }
+
+  .glitch {
+    font-style: italic;
+    color: rgb(223, 191, 191);
+    position: relative;
+    font-size: 9vw;
+    text-align: center;
+    animation: glitch 5s 5s infinite;
+    grid-column: 1;
+    grid-row: 4;
+    z-index: 1;
+  }
+  
+  .glitch::before {
+    content: attr(data-text);
+    position: absolute;
+    left: .2vw;
+    text-shadow: -.5vw 0 magenta;
+    overflow: hidden;
+    top: 0;
+    animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+  }
+  
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -.5vw 0 lightgreen;
+    overflow: hidden;
+    top: 0;
+    animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+  }
+
+  .container {
+    position: absolute;
+    grid-row: 6;
+    z-index: 1;
+    transform: translateX(115%);
+  }
+
+  .prologueLink {
+    font-family: Orbitron;
+    font-weight: 100;
+    font-size: 3vw;
+    color: rgba(165, 141, 141, .4);
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 1;
+    grid-column: 1;
+    grid-row: 10;
+    background-color: transparent;
+    border: none;
+  }
+
+  .prologueLink:hover {
+    color: #0d98ba;
+  }
+
+  /* Second part of Spy page */
+  .loading {
+    font-family: Orbitron;
+    font-weight: 100;
+    font-size: 2vw;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    grid-row: 2;
+    grid-column: 1;
+    animation: loading 1s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes loading {
+      0%,100% { opacity: 0 }
+      50% { opacity: 1 }
+  }
+
+  .line {
+    grid-row: 3;
+    grid-column: 1;
+    z-index: 0;
+  }
+
+  @keyframes connection {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;} 
+ } 
+
+ @keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;} 
+} 
+
+  .connection {
+    font-family: Orbitron;
+    font-weight: 100;
+    font-size: 2vw;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    grid-row: 2;
+    grid-column: 1;
+    opacity: 0;
+    z-index: 1;
+    animation: connection 0.5s linear 0.5s 1 forwards, fadeOut 0.5s linear 29s 1 forwards;
+}
+
+.closed {
+    font-family: Orbitron;
+    font-weight: 100;
+    font-size: 2vw;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    grid-row: 2;
+    grid-column: 1;
+    z-index: 1;
+    opacity: 0;
+    animation: connection 0.5s linear 29s 1 forwards;
+  }
+
+.greeting {
+    font-family: Orbitron;
+    font-weight: 100;
+    font-size: 1.3vw;
+    color: #FAF9F6;
+    text-align: left;
+    width: 90%;
+    grid-row: 4;
+    grid-column: 1;
+    margin-left: 5%;
+    letter-spacing: .15em;
+  }
+
+  .reasoning {
+    font-family: Orbitron;
+    font-weight: 100;
+    font-size: 1.3vw;
+    color: #FAF9F6;
+    text-align: left;
+    width: 90%;
+    grid-row: 5;
+    grid-column: 1;
+    margin-left: 5%;
+    letter-spacing: .15em;
+  }
+
+  .means {
+    font-family: Orbitron;
+    font-weight: 100;
+    font-size: 1.3vw;
+    color: #FAF9F6;
+    text-align: left;
+    width: 90%;
+    grid-row: 8;
+    grid-column: 1;
+    margin-left: 5%;
+    letter-spacing: .15em;
+  }
+
+  .next {
+    font-family: Orbitron;
+    font-weight: 100;
+    font-size: 1.3vw;
+    color: #FAF9F6;
+    text-align: left;
+    width: 90%;
+    grid-row: 11;
+    grid-column: 1;
+    margin-left: 5%;
+    letter-spacing: .15em;
+  }
+
+  .ogWebsite {
+    font-family: Orbitron;
+    font-weight: 100;
+    font-size: 1.5vw;
+    color: #FAF9F6;
+    text-align: right;
+    width: 90%;
+    grid-row: 13;
+    grid-column: 1;
+    margin-left: 5%;
+    letter-spacing: .15em;
+  }
+
+  a:link {
+    color: #FAB3AD;
+  }
+  
+  a:visited {
+    color: #FAB3AD;
+  }
+  
+  a:hover {
+    color: #0d98ba;
+  }
+
+  .additionalInfo {
+    font-family: Orbitron;
+    font-weight: 100;
+    font-size: 1.5vw;
+    color: #FAB3AD;;
+    text-align: right;
+    width: 90%;
+    grid-row: 14;
+    grid-column: 1;
+    margin-left: 5%;
+    letter-spacing: .15em;
+    background: transparent;
+    border: none
+  }
+
+  .additionalInfo:hover {
+    color: #0d98ba;
+  }
+
+  /* Additional Info for Spy */
+  .addBuffer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2vw;
+  }
+
+  .group {
+    width: 25vw;
+    margin-left: 2vw;
+  }
+
+  .iframespy {
+    width: 25vw;
+    margin-left: 2vw;
+    height: 20vw;
+  }
+
+  .media {
+    display: flex;
+  }
+
+  .addTitle {
+    font-family: Orbitron;
+    font-weight: 100;
+    font-size: 2vw;
+    color: #FAF9F6;;
+    text-align: center;
+    width: 90%;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 1;
+    margin-left: 5%;
+    letter-spacing: .15em;
+  }
+
+  .addtext {
+    font-family: Orbitron;
+    font-weight: 100;
+    font-size: 1.5vw;
+    color: #FAF9F6;;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    letter-spacing: .15em;
+  }
