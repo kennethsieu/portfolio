@@ -41,6 +41,7 @@ const IndexPage: React.FC<PageProps> = () => {
   const [spyinterval, setSpyinterval] = useState<NodeJS.Timer>()
   const [introinterval, setIntroInterval] = useState<NodeJS.Timer>()
   const [cnt, setCnt] = useState(0)
+  const [twilightHome, setHome] = useState<boolean>(true)
 
   const [options, setOptions] = useState<boolean>(false)
 
@@ -79,6 +80,10 @@ const IndexPage: React.FC<PageProps> = () => {
     }else {
       return s.substring(0, Math.min(len, count - start - delay * 3))
     }
+  }
+
+  function handleClickHere() {
+    setHome(false)
   }
 
   function handleClick() {
@@ -312,87 +317,92 @@ const IndexPage: React.FC<PageProps> = () => {
               </div>
           </div>
           <div className="TwilightMarket">
-            <div className="image-stack">
+            {twilightHome && (
+              <div className="image-stack">
               <div className="shimmer1"><img className = "twilightimg" src={shimmer_1}/></div>
               <div className="main"><img className = "twilightimg" src={TwilightFrame}/></div>
               <div className="fog1"> <img className = "twilightimg" src={fog1}/></div>
               <div className="fog2"> <img className = "twilightimg" src={fog2}/></div>
               <div className="fog3"> <img className = "twilightimg" src={fog3}/></div>
+              <button className="twilightbutton" onClick={handleClickHere}> </button>
             </div>
-          </div>
-          <div className="macCollie">
-            <div className="image-stack-mcCollie">
-              <div className="main"> <img className = "twilightimg" src={dialogue_ui}/></div>
-              <div className="main"> <img className = "twilightimg" src={trees}/></div>
-              <div className="fog1"> <img className = "twilightimg" src={mcCollieFog}/></div>
-              <div className="fog2"> <img className = "twilightimg" src={mcCollieFog2}/></div>
-              {express == 1 && (
-                <React.Fragment>
-                  <div className ="bod"><img className = "twilightimg" src={bod}/> </div>
-                  <div className ="jaw"><img className = "twilightimg" src={jaw}/> </div>
-                  <div className ="head"><img className = "twilightimg" src={head}/> </div>
-                </React.Fragment>
-              )}
-              {express == 2 && (
-                <React.Fragment>
-                  <div className ="bod"><img className = "twilightimg" src={bod}/> </div>
-                  <div className ="jawtalking"><img className = "twilightimg" src={jaw}/> </div>
-                  <div className ="head"><img className = "twilightimg" src={head}/> </div>
-                </React.Fragment>
-              )}
-              {express == 3 && (
-                <React.Fragment>
-                  <div className ="bod"><img className = "twilightimg" src={angryBod}/> </div>
-                  <div className ="angryjaw"><img className = "twilightimg" src={angryJaw}/> </div>
-                  <div className ="angryhead"><img className = "twilightimg" src={angryHead}/> </div>
-                </React.Fragment>
-              )}
-              {express == 4 && (
-                <React.Fragment>
-                  <div className ="bod"><img className = "twilightimg" src={angryBod}/> </div>
-                  <div className ="angryjawtalking "><img className = "twilightimg" src={angryJaw}/> </div>
-                  <div className ="angryhead"><img className = "twilightimg" src={angryHead}/> </div>
-                </React.Fragment>
-              )}
-              {start && (
-                <React.Fragment>
-                  <button className = "startbutton" onClick={handleClick}>Who are you???</button>
-                  
-                </React.Fragment>
-              )}
-              {mcCollie && (
-                <div className = "McCollieIntro"> Hello Human. Name's McCollie. Welcome to the Twilight Market.</div>
-              )}
-              {what && (
-                <div className = "whatanswer"> The Twilight Market is a Dark Fantasy Visual Novel started in 2021</div>
-              )}
-              {work && (
-                <div className = "workanswer">Kenneth worked on UI, dialogue, enviorments, rigging, animations, etc</div>
-              )}
-              {artist && (
-                <div className = "artistanswer">My Buddy Calvin drew me! Check him out on instagram @calvin_beeman_weber </div>
-              )}
-              {finished && (
-                <div className = "finishedanswer"> HAA! No. It's a very much WIP. We are recently free so ...</div>
-              )}
-              {others && (
-                <div className = "otheranswer">Kenneth's friend Noah Dilworth is the other programmer!</div>
-              )}
-              {engine && (
-                <div className = "engineanswer">This game is built using the Godo game engine</div>
-              )}
-
-              {options && (
-                <React.Fragment>
-                    <button className = "what" onClick={handleWhat}>What is the Twilight Market?</button>
-                    <button className = "work" onClick={handleWork}>What did Kenneth Do?</button>
-                    <button className = "artist" onClick={handleArtist}>Who drew the Art?</button>
-                    <button className = "finsihed" onClick={handleFinished}>Is it done?</button>
-                    <button className = "others" onClick={handleOther}>Who else is working on this project?</button>
-                    <button className = "engine" onClick={handleEngine}>What engine was this made in?</button>
-                </React.Fragment>
-              )}
+            )}
+            {!twilightHome && (
+              <div className="macCollie">
+              <div className="image-stack-mcCollie">
+                <div className="main"> <img className = "twilightimg" src={dialogue_ui}/></div>
+                <div className="main"> <img className = "twilightimg" src={trees}/></div>
+                <div className="fog1"> <img className = "twilightimg" src={mcCollieFog}/></div>
+                <div className="fog2"> <img className = "twilightimg" src={mcCollieFog2}/></div>
+                {express == 1 && (
+                  <React.Fragment>
+                    <div className ="bod"><img className = "twilightimg" src={bod}/> </div>
+                    <div className ="jaw"><img className = "twilightimg" src={jaw}/> </div>
+                    <div className ="head"><img className = "twilightimg" src={head}/> </div>
+                  </React.Fragment>
+                )}
+                {express == 2 && (
+                  <React.Fragment>
+                    <div className ="bod"><img className = "twilightimg" src={bod}/> </div>
+                    <div className ="jawtalking"><img className = "twilightimg" src={jaw}/> </div>
+                    <div className ="head"><img className = "twilightimg" src={head}/> </div>
+                  </React.Fragment>
+                )}
+                {express == 3 && (
+                  <React.Fragment>
+                    <div className ="bod"><img className = "twilightimg" src={angryBod}/> </div>
+                    <div className ="angryjaw"><img className = "twilightimg" src={angryJaw}/> </div>
+                    <div className ="angryhead"><img className = "twilightimg" src={angryHead}/> </div>
+                  </React.Fragment>
+                )}
+                {express == 4 && (
+                  <React.Fragment>
+                    <div className ="bod"><img className = "twilightimg" src={angryBod}/> </div>
+                    <div className ="angryjawtalking "><img className = "twilightimg" src={angryJaw}/> </div>
+                    <div className ="angryhead"><img className = "twilightimg" src={angryHead}/> </div>
+                  </React.Fragment>
+                )}
+                {start && (
+                  <React.Fragment>
+                    <button className = "startbutton" onClick={handleClick}>Who are you???</button>
+                    
+                  </React.Fragment>
+                )}
+                {mcCollie && (
+                  <div className = "McCollieIntro"> Hello Human. Name's McCollie. Welcome to the Twilight Market.</div>
+                )}
+                {what && (
+                  <div className = "whatanswer"> The Twilight Market is a Dark Fantasy Visual Novel started in 2021</div>
+                )}
+                {work && (
+                  <div className = "workanswer">Kenneth worked on UI, dialogue, enviorments, rigging, animations, etc</div>
+                )}
+                {artist && (
+                  <div className = "artistanswer">My Buddy Calvin drew me! Check him out on instagram @calvin_beeman_weber </div>
+                )}
+                {finished && (
+                  <div className = "finishedanswer"> HAA! No. It's a very much WIP. We are recently free so ...</div>
+                )}
+                {others && (
+                  <div className = "otheranswer">Kenneth's friend Noah Dilworth is the other programmer!</div>
+                )}
+                {engine && (
+                  <div className = "engineanswer">This game is built using the Godo game engine</div>
+                )}
+  
+                {options && (
+                  <React.Fragment>
+                      <button className = "what" onClick={handleWhat}>What is the Twilight Market?</button>
+                      <button className = "work" onClick={handleWork}>What did Kenneth Do?</button>
+                      <button className = "artist" onClick={handleArtist}>Who drew the Art?</button>
+                      <button className = "finsihed" onClick={handleFinished}>Is it done?</button>
+                      <button className = "others" onClick={handleOther}>Who else is working on this project?</button>
+                      <button className = "engine" onClick={handleEngine}>What engine was this made in?</button>
+                  </React.Fragment>
+                )}
+              </div>
             </div>
+            )}
           </div>
           <div className="operationSpyfx">
             <div className="image-stack-spy">
