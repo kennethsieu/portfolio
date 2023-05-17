@@ -64,20 +64,18 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 3vw;
 }
 
 .demoReelTitle {
     font-family: 'Oswald', sans-serif;
     color: #FAF9F6;
     font-size: 4vw;
-    margin-bottom: 5vw;
+
 }
 
 .iframe {
     width: 60%;
-    height: 120vw;
-    margin-bottom: 10vw;
+    height: 30vw;
 }
 
 /*Twilight Market Intro*/
