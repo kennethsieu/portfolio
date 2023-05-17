@@ -10,12 +10,26 @@ body {
 
 /* Introduction Page */
 .Introduction {
-    background-image: linear-gradient(#CD8B94, #2b2929) ;
+    background: linear-gradient(45deg, #2b2929,#CD8B94) ;
     display: flex;
     flex-direction: horizontal;
+    background-size: 300% 300%;
     flex: start;
     padding: 2vw;
+    animation: flow 10s ease-in-out infinite;
 }
+
+@keyframes flow {
+  0%, 100% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+
+
 
 .kennethpng {
     width: 28vw;
@@ -29,16 +43,16 @@ body {
 }
 
 .hello {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Andika', sans-serif;
     color: #FAF9F6;
     font-size: 6vw;
 
 }
 
 .intro {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Andika', sans-serif;
     color: #FAF9F6;
-    font-size: 2.5vw;
+    font-size: 2vw;
     font-weight: 600;
 }
 

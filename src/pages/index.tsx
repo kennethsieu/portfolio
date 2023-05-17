@@ -38,8 +38,48 @@ const IndexPage: React.FC<PageProps> = () => {
   const [addInfo, setInfo] = useState<boolean>(false)
   const [count, setCount] = useState(0);
   const delay = 10;
+  const [spyinterval, setSpyinterval] = useState<NodeJS.Timer>()
+  const [introinterval, setIntroInterval] = useState<NodeJS.Timer>()
+  const [cnt, setCnt] = useState(0)
 
   const [options, setOptions] = useState<boolean>(false)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount(cnt => cnt + 1);
+    }, 25);
+    setIntroInterval(interval)
+    return () => clearInterval(interval);
+  }, []);
+
+  function myintro() {
+    var s = "As of Spring 2023, I am a UC Berkeley graduate with a degree in Computer Science. My areas of expertise and passion lie in Game and Web development. I thoroughly enjoy the process of creating new projects and exploring innovative ideas."
+    var start = 80
+    var pause1 = 18
+    var pause2 = 81
+    var pause3 = 148
+    var len = s.length
+    if(count > 400) {
+      clearInterval(introinterval)
+    }
+    if(count < start) {
+      return ""
+    } else if (count >= start && count < start + pause1) {
+      return s.substring(0, count - start + 1)
+    } else if(count >= start + pause1 && count < start + pause1 + delay) {
+      return s.substring(0, pause1)
+    } else if(count >= start + pause1 + delay && count < start + delay + pause2) {
+      return s.substring(0, count - start - delay + 1)
+    } else if (count >= start + pause2 + delay && count < start + pause2 + delay * 2) {
+      return s.substring(0, pause2)
+    }else if (count >= start + pause2 + delay * 2 && count < start + delay * 2 + pause3) {
+      return s.substring(0, count - start - delay * 2 + 1)
+    }else if (count >= start + pause3 + delay * 2 && count < start + pause3 + delay * 3) {
+      return s.substring(0, pause3)
+    }else {
+      return s.substring(0, Math.min(len, count - start - delay * 3))
+    }
+  }
 
   function handleClick() {
     setStart(false);
@@ -130,9 +170,11 @@ const IndexPage: React.FC<PageProps> = () => {
   function handleSpy() {
     setSpyfx(false)
     setPrologue(true)
-    const interval = setInterval(() => {
+    
+    const intervalID = setInterval(() => {
       setCount(count => count + 1);
     }, 25);
+    setSpyinterval(intervalID)
   }
 
   function handleInfo() {
@@ -225,6 +267,9 @@ const IndexPage: React.FC<PageProps> = () => {
     var pause1 = 40
     var pause2 = 65
     var len = s.length
+    if(count > 1300) {
+      clearInterval(spyinterval)
+    }
     if(count < start) {
       return ""
     } else if (count >= start && count < start + pause1) {
@@ -247,15 +292,14 @@ const IndexPage: React.FC<PageProps> = () => {
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
       <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet"></link>
       <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Andika&display=swap" rel="stylesheet"></link>
       <body>
         <div className="overLayer">
           <div className="Introduction">
             <img className = "kennethpng" src={kenneth}/>
             <div className = "introText">
               <div className="hello"> <b>Hi, I'm Kenneth</b></div>
-              <div className="intro">As of Spring 2023, I am a UC Berkeley graduate with a degree in Computer Science. 
-              My areas of expertise and passion lie in Game and Web development. I thoroughly
-              enjoy the process of creating new projects and exploring innovative ideas.</div>
+              <div className="intro"> {myintro()}</div>
             </div>
           </div>
           <div className="demoReel">
