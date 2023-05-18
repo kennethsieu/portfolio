@@ -26,7 +26,7 @@ import distant from "../images/distant.png"
 import gladetrees from "../images/gladetrees.png"
 import grass from "../images/grass.png"
 import title from "../images/title_card.png"
-
+import gladebutton from "../images/gladebutton.png"
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -48,6 +48,7 @@ const IndexPage: React.FC<PageProps> = () => {
   const [introinterval, setIntroInterval] = useState<NodeJS.Timer>()
   const [cnt, setCnt] = useState(0)
   const [twilightHome, setHome] = useState<boolean>(true)
+  
 
   const [options, setOptions] = useState<boolean>(false)
 
@@ -483,7 +484,10 @@ const IndexPage: React.FC<PageProps> = () => {
                 <img className="grass1" src={grass}/>
                 <img className="grass2" src={grass}/>
                 <img className="title" src={title}/>
-                
+                <div className="gladebutton">
+                  <button className="actualgladebutton"></button>
+                  <img className="gradebuttonimg" src={gladebutton}/>
+                </div>
               </div>
           </div>
         </div>

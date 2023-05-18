@@ -810,6 +810,7 @@ body {
   .glade-stack {
     display: grid;
     position: relative;
+    grid-template-rows: repeat(15, 3vw);
   }
 
   @keyframes primary {
@@ -917,6 +918,35 @@ body {
     z-index: 6;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .gladebutton {
+    width: 50vw;
+    grid-row: 8;
+    grid-column: 1;
+    z-index: 7;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    border: none;
+  }
+
+  .gladebutton:hover {
+    transform: translateY(-1vw);
+  }
+
+  .gradebuttonimg {
+    width: 90%;
+    margin-left: 1vw;
+  }
+
+  .actualgladebutton {
+    width: 49vw;
+    height: 20vw;
+    position: absolute;
+    background: transparent;
+    border: none;
+
   }
 
 
