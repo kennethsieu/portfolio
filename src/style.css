@@ -798,3 +798,125 @@ body {
     margin-right: 2vw;
     letter-spacing: .15em;
   }
+
+  /* Glade of the Gray */
+  .glade {
+    width: 100%;
+    overflow: hidden;
+    height: 45vw;
+  }
+
+
+  .glade-stack {
+    display: grid;
+    position: relative;
+  }
+
+  @keyframes primary {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes secondary {
+    0% {
+      transform: translateX(99%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .cloud1 {
+    width: 90vw;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 1;
+    animation: primary linear 10s infinite;
+  }
+
+  .cloud2 {
+    width: 90vw;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 1;
+    animation: secondary linear 10s infinite;
+  }
+
+  .distant1 {
+    width: 90vw;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 2;
+    animation: primary linear 20s infinite;
+  }
+
+  .distant2 {
+    width: 90vw;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 2;
+    animation: secondary linear 20s infinite;
+  }
+
+  .mountain1 {
+    width: 90vw;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 3;
+    animation: primary linear 30s infinite;
+  }
+
+  .mountain2 {
+    width: 90vw;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 3;
+    animation: secondary linear 30s infinite;
+  }
+
+  .trees1 {
+    width: 90vw;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 4;
+    animation: primary linear 40s infinite;
+  }
+
+  .trees2 {
+    width: 90vw;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 4;
+    animation: secondary linear 40s infinite;
+  }
+
+  .grass1 {
+    width: 90vw;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 5;
+    animation: primary linear 50s infinite;
+  }
+
+  .grass2 {
+    width: 90vw;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 5;
+    animation: secondary linear 50s infinite;
+  }
+
+  .title {
+    width: 50vw;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 6;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+

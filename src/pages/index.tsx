@@ -20,6 +20,12 @@ import angryBod from "../images/angyBod.png"
 import angryJaw from "../images/AngyJaw.png"
 import angryHead from "../images/RAGE.png"
 import group from "../images/group.jpg"
+import clouds from "../images/clouds.png"
+import mountains from "../images/mountains.png"
+import distant from "../images/distant.png"
+import gladetrees from "../images/gladetrees.png"
+import grass from "../images/grass.png"
+import title from "../images/title_card.png"
 
 
 
@@ -463,6 +469,22 @@ const IndexPage: React.FC<PageProps> = () => {
               )}
               <div className="scanlines"></div>
             </div>
+          </div>
+          <div className="glade">
+              <div className="glade-stack">
+                <img className="cloud1" src={clouds}/>
+                <img className="cloud2" src={clouds}/>
+                <img className="mountain1" src={mountains}/>
+                <img className="mountain2" src={mountains}/>
+                <img className="distant1" src={distant}/>
+                <img className="distant2" src={distant}/>
+                <img className="trees1" src={gladetrees}/>
+                <img className="trees2" src={gladetrees}/>
+                <img className="grass1" src={grass}/>
+                <img className="grass2" src={grass}/>
+                <img className="title" src={title}/>
+                
+              </div>
           </div>
         </div>
       </body>
