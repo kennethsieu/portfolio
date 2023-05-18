@@ -975,4 +975,43 @@ body {
     margin-left: 5vw;
   }
 
+  /* Ink*/
+  .Ink {
+    overflow: hidden;
+    height: 45vw;
+    background: linear-gradient(30deg, #2b2929,#462f46, #2b2929, #654365, #2b2929, #845784, #2b2929, #654365, #2b2929, #845784) ;
+    background-size: 300% 300%;
+    flex: start;
+    padding: 2vw;
+    animation: flow 20s ease-in-out infinite;
+  }
+
+  .inktitle {
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    text-align: center;
+    font-size: 5vw;
+  }
+
+  .inkContent {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3vw;
+    justify-content: space-between;
+  }
+
+  .inktext {
+    width: 40vw;
+    font-family: 'Permanent Marker';
+    color: white;
+    font-size: 1.5vw;
+    margin-left: 3vw;
+  }
+
+  .inkframe {
+    width: 35vw;
+    height: 30vw;
+    margin-right: 3vw;
+  }
+
 

@@ -312,6 +312,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"/>
       <link href="https://fonts.googleapis.com/css2?family=Andika&display=swap" rel="stylesheet"></link>
       <link href="https://fonts.googleapis.com/css2?family=Headland+One&display=swap" rel="stylesheet"></link>
+      <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"></link>
       <body>
         <div className="overLayer">
           <div className="Introduction">
@@ -519,6 +520,22 @@ const IndexPage: React.FC<PageProps> = () => {
               </div>
             )}
 
+          </div>
+          <div className="Ink">
+            <div className="inktitle">Ink</div>
+            <div className="inkContent">
+              <div className="inktext"> Ink is an animation created with Maya over a period of 3 weeks for UCBugg, a student-run 3D animation class. 
+              I took charge of modeling, rigging, skinning, and animating the monster for the project. Furthermore, 
+              I handled camera control and post-production editing of the recorded content.
+              <br></br>
+              <br></br>
+              My partner, Cynthia Xiong, pitched the concept and took responsibility for modeling and skinning all other assets. 
+              Additionally, she handled the coloring and shading of every asset. We did have three other members, however they went mia and 
+              contributed almost nothing into the final animation.    
+              
+              </div>
+              <div className="inkframe"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/BCw64MGOHVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            </div>
           </div>
         </div>
       </body>
