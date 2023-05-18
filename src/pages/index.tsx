@@ -56,7 +56,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCount(cnt => cnt + 1);
+      setCnt(cnt => cnt + 1);
     }, 25);
     setIntroInterval(interval)
     return () => clearInterval(interval);
@@ -64,30 +64,30 @@ const IndexPage: React.FC<PageProps> = () => {
 
   function myintro() {
     var s = "As of Spring 2023, I am a UC Berkeley graduate with a degree in Computer Science. My areas of expertise and passion lie in Game and Web development. I thoroughly enjoy the process of creating new projects and exploring innovative ideas."
-    var start = 80
+    var start = 30
     var pause1 = 18
     var pause2 = 81
     var pause3 = 148
     var len = s.length
-    if(count > 400) {
+    if(cnt > 400) {
       clearInterval(introinterval)
     }
-    if(count < start) {
+    if(cnt < start) {
       return ""
-    } else if (count >= start && count < start + pause1) {
-      return s.substring(0, count - start + 1)
-    } else if(count >= start + pause1 && count < start + pause1 + delay) {
+    } else if (cnt >= start && cnt < start + pause1) {
+      return s.substring(0, cnt - start + 1)
+    } else if(cnt >= start + pause1 && cnt < start + pause1 + delay) {
       return s.substring(0, pause1)
-    } else if(count >= start + pause1 + delay && count < start + delay + pause2) {
-      return s.substring(0, count - start - delay + 1)
-    } else if (count >= start + pause2 + delay && count < start + pause2 + delay * 2) {
+    } else if(cnt >= start + pause1 + delay && cnt < start + delay + pause2) {
+      return s.substring(0, cnt - start - delay + 1)
+    } else if (cnt >= start + pause2 + delay && cnt < start + pause2 + delay * 2) {
       return s.substring(0, pause2)
-    }else if (count >= start + pause2 + delay * 2 && count < start + delay * 2 + pause3) {
-      return s.substring(0, count - start - delay * 2 + 1)
-    }else if (count >= start + pause3 + delay * 2 && count < start + pause3 + delay * 3) {
+    }else if (cnt >= start + pause2 + delay * 2 && cnt < start + delay * 2 + pause3) {
+      return s.substring(0, cnt - start - delay * 2 + 1)
+    }else if (cnt >= start + pause3 + delay * 2 && cnt < start + pause3 + delay * 3) {
       return s.substring(0, pause3)
     }else {
-      return s.substring(0, Math.min(len, count - start - delay * 3))
+      return s.substring(0, Math.min(len, cnt - start - delay * 3))
     }
   }
 
@@ -299,6 +299,10 @@ const IndexPage: React.FC<PageProps> = () => {
     }
   }
 
+  function handleGlade() {
+    setGlade(false)
+  }
+
   return (
     <main>
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -491,7 +495,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 <img className="grass2" src={grass}/>
                 <img className="title" src={title}/>
                 <div className="gladebutton">
-                  <button className="actualgladebutton" onClick={setGlade(false)}></button>
+                  <button className="actualgladebutton" onClick={handleGlade}> </button>
                   <img className="gradebuttonimg" src={gladebutton}/>
                 </div>
               </div>
