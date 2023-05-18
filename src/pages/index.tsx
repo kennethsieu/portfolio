@@ -28,6 +28,7 @@ import grass from "../images/grass.png"
 import title from "../images/title_card.png"
 import gladebutton from "../images/gladebutton.png"
 import select from "../images/select.png"
+import clickhere from "../images/clickhere.png"
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -332,7 +333,10 @@ const IndexPage: React.FC<PageProps> = () => {
               <div className="fog1"> <img className = "twilightimg" src={fog1}/></div>
               <div className="fog2"> <img className = "twilightimg" src={fog2}/></div>
               <div className="fog3"> <img className = "twilightimg" src={fog3}/></div>
-              <button className="twilightbutton" onClick={handleClickHere}> </button>
+              <div className="button_container">
+                <button className="twilightbutton" onClick={handleClickHere}> </button>
+                <img className = "clickhere" src={clickhere}/>
+              </div>
             </div>
             )}
             {!twilightHome && (
