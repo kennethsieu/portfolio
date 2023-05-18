@@ -311,6 +311,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet"></link>
       <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"/>
       <link href="https://fonts.googleapis.com/css2?family=Andika&display=swap" rel="stylesheet"></link>
+      <link href="https://fonts.googleapis.com/css2?family=Headland+One&display=swap" rel="stylesheet"></link>
       <body>
         <div className="overLayer">
           <div className="Introduction">
@@ -503,6 +504,18 @@ const IndexPage: React.FC<PageProps> = () => {
             {!glade && (
               <div className="glade-stack">
                 <img className="select" src={select}/>
+                <div className="gladeStuff">
+                  <div className="gladeframe"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/UyuIIs9Qpbc"
+                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                   encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                  <div className="gladeinfo"> I pitched Glade of the Gray in Fall 2020 as a turn-based card game inspired by Dominion and Darkest Dungeon. 
+                  With the help of three collaborators, we developed the game over six weeks. I conceptualized the majority of the designs and fully implemented
+                  the card-based battle system.
+                  <br></br>
+                  <br></br>
+                  The game is avalible to play on <a href="https://fire2ken.itch.io/glade-of-the-gray>itch.io"> itch.io</a> on browser
+                  </div>
+                </div>
               </div>
             )}
 

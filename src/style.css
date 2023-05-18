@@ -959,4 +959,20 @@ body {
     width: 90vw;
   }
 
+  .gladeinfo {
+    font-family: 'Headland One', serif;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 2vw;
+    color: white;
+    font-size: 1.5vw;
+
+  }
+
+  .gladeframe {
+    width: 50vw;
+    height: 25vw;
+    margin-left: 5vw;
+  }
+
 
