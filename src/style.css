@@ -533,7 +533,7 @@ body {
     position: relative;
     font-size: 9vw;
     text-align: center;
-    animation: glitch 5s 5s infinite;
+    animation: glitch 5s 2s infinite;
     grid-column: 1;
     grid-row: 4;
     z-index: 1;
@@ -546,7 +546,7 @@ body {
     text-shadow: -.5vw 0 magenta;
     overflow: hidden;
     top: 0;
-    animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+    animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 2.05s infinite;
   }
   
   .glitch::after {
@@ -556,7 +556,7 @@ body {
     text-shadow: -.5vw 0 lightgreen;
     overflow: hidden;
     top: 0;
-    animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+    animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 2s infinite;
   }
 
   .container {
@@ -946,7 +946,11 @@ body {
     position: absolute;
     background: transparent;
     border: none;
+  }
 
+  /* the second part */
+  .select {
+    width: 90vw;
   }
 
 
