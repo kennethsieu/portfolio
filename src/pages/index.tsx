@@ -530,7 +530,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <br></br>
               <br></br>
               My partner, Cynthia Xiong, pitched the concept and took responsibility for modeling and skinning all other assets. 
-              Additionally, she handled the coloring and shading of every asset. We did have three other members, however they went mia and 
+              Additionally, she handled the coloring, shading, and lighting of every asset. We did have three other members, however they went mia and 
               contributed almost nothing into the final animation.    
               
               </div>
