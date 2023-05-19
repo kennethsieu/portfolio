@@ -1,11 +1,43 @@
-body {
+html, body {
     background-color: #323131;
+    margin: 0;
+    padding: 0;
 }
 
 .overLayer {
     width: 90%;
     margin: auto;
     padding: 3vw;
+}
+
+.navlink:visited {
+  color: #FAF9F6;
+  text-decoration: none
+}
+
+.navlink:link {
+  color: #FAF9F6;
+  text-decoration: none
+}
+
+.navlink:hover {
+  color: #0d98ba
+}
+
+
+.navbar {
+  background: linear-gradient(45deg, #2b2929,Gray) ;
+  height: 2vw;
+  width: 100%;
+  position: fixed;
+  z-index: 20;
+  font-family: 'Andika', sans-serif;
+  color: #FAF9F6;
+  font-size: 1.5vw;
+  padding: 1vw;
+  display: flex;
+  justify-content: space-evenly;
+  
 }
 
 /* Introduction Page */

@@ -315,6 +315,14 @@ const IndexPage: React.FC<PageProps> = () => {
       <link href="https://fonts.googleapis.com/css2?family=Headland+One&display=swap" rel="stylesheet"></link>
       <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"></link>
       <body>
+        <div className="navbar">
+          <div ><a className="navlink" href="#demo">Demo Reel</a></div>
+          <div ><a className="navlink" href="#twil">Twilight Market</a></div>
+          <div ><a className="navlink"href="#spy">Operation: Spyfx</a></div>
+          <div ><a className="navlink"href="#glade">Glade of the Gray</a></div>
+          <div ><a className="navlink"href="#ink">Ink</a></div>
+          <div ><a className="navlink"href="#contact">Contact Me</a></div>
+        </div>
         <div className="overLayer">
           <div className="Introduction">
             <img className = "kennethpng" src={kenneth}/>
@@ -323,7 +331,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <div className="intro"> {myintro()}</div>
             </div>
           </div>
-          <div className="demoReel">
+          <div className="demoReel" id = "demo">
               <div className="demoReelTitle"> <b>Demo Reel</b></div>
               <div className="iframe">
                 <iframe width = "100%" height="100%" src="https://www.youtube.com/embed/D_Oyplmhhv0" 
@@ -332,7 +340,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
           </div>
-          <div className="TwilightMarket">
+          <div className="TwilightMarket" id = "twil">
             {twilightHome && (
               <div className="image-stack">
               <div className="shimmer1"><img className = "twilightimg" src={shimmer_1}/></div>
@@ -423,7 +431,7 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>
             )}
           </div>
-          <div className="operationSpyfx">
+          <div className="operationSpyfx" id = "spy">
             <div className="image-stack-spy">
               {spyfx && (
                 <React.Fragment>
@@ -483,7 +491,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <div className="scanlines"></div>
             </div>
           </div>
-          <div className="glade">
+          <div className="glade" id = "glade">
             {glade && (
               <div className="glade-stack">
                 <img className="cloud1" src={clouds}/>
@@ -522,7 +530,7 @@ const IndexPage: React.FC<PageProps> = () => {
             )}
 
           </div>
-          <div className="Ink">
+          <div className="Ink" id = "ink">
             <div className="inktitle">Ink</div>
             <div className="inkContent">
               <div className="inktext"> Ink is an animation created with Maya over a period of 3 weeks for UCBugg, a student-run 3D animation class. 
@@ -538,7 +546,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <div className="inkframe"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/BCw64MGOHVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
             </div>
           </div>
-          <div className="Contact">
+          <div className="Contact" id = "contact">
             <div className="contacttitle">Contact Me!</div>
             <div className="contacttext"> Email: kennethsieu14@gmail.com</div>
             <div className="contacttext"> Phone Number: 510-325-8022</div>
