@@ -334,7 +334,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <div className="demoReel" id = "demo">
               <div className="demoReelTitle"> <b>Demo Reel</b></div>
               <div className="iframe">
-                <iframe width = "100%" height="100%" src="https://www.youtube.com/embed/D_Oyplmhhv0" 
+                <iframe width = "100%" height="100%" src="https://www.youtube.com/" 
                 title="YouTube video player" frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
                 picture-in-picture; web-share" allowfullscreen></iframe>
