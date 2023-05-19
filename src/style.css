@@ -67,7 +67,7 @@ body {
 }
 
 .demoReelTitle {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Andika', sans-serif;
     color: #FAF9F6;
     font-size: 4vw;
 
@@ -1014,5 +1014,32 @@ body {
     height: 30vw;
     margin-right: 3vw;
   }
+
+  /* Contact */
+  .Contact {
+    overflow: hidden;
+    height: 45vw;
+    background: linear-gradient(45deg, black,  white) ;
+    background-size: 300% 300%;
+    flex: start;
+    padding: 2vw;
+    animation: flow 20s ease-in-out infinite;
+  }
+
+  .contacttitle {
+    font-family: 'Andika', sans-serif;
+    color: #FAF9F6;
+    font-size: 5vw;
+    text-align: right;
+    margin-right: 5vw;
+  }
+
+  .contacttext {
+    font-family: 'Andika', sans-serif;
+    color: #FAF9F6;
+    font-size: 3vw;
+    margin-left: 5vw;
+  }
+
 
 

@@ -29,6 +29,7 @@ import title from "../images/title_card.png"
 import gladebutton from "../images/gladebutton.png"
 import select from "../images/select.png"
 import clickhere from "../images/clickhere.png"
+import resume from "../KennethSieuResume.pdf"
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -536,6 +537,12 @@ const IndexPage: React.FC<PageProps> = () => {
               </div>
               <div className="inkframe"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/BCw64MGOHVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
             </div>
+          </div>
+          <div className="Contact">
+            <div className="contacttitle">Contact Me!</div>
+            <div className="contacttext"> Email: kennethsieu14@gmail.com</div>
+            <div className="contacttext"> Phone Number: 510-325-8022</div>
+            <div className="contacttext"> Resume: <a className="resumedownload" href={resume} download>Download</a>{` `}</div>
           </div>
         </div>
       </body>
