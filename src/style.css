@@ -1,9 +1,12 @@
 html, body {
-    background-color: #323131;
+    background: #323131;
     margin: 0;
     padding: 0;
 }
 
+.buttun {
+  cursor: pointer;
+}
 .overLayer {
     width: 90%;
     margin: auto;
@@ -109,7 +112,7 @@ html, body {
 .iframe {
     width: 60%;
     height: 30vw;
-    margin-bottom: 3vw;
+    margin-bottom: vw;
 }
 
 /*Twilight Market Intro*/
@@ -603,7 +606,7 @@ html, body {
     position: absolute;
     grid-row: 6;
     z-index: 1;
-    transform: translateX(115%);
+    transform: translateX(125%);
   }
 
   .prologueLink {
