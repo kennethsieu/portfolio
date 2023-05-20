@@ -86,6 +86,7 @@ html, body {
     color: #FAF9F6;
     font-size: 2vw;
     font-weight: 600;
+    height: 25vw;
 }
 
 /* Demo Reel */
@@ -113,7 +114,7 @@ html, body {
 /*Twilight Market Intro*/
 .TwilightMarket {
     background-color: rgb(94, 74, 94);
-    
+    height: 50vw;
 }
 
 .image-stack {
@@ -1071,6 +1072,10 @@ html, body {
     color: #FAF9F6;
     font-size: 3vw;
     margin-left: 5vw;
+  }
+
+  .resume:link {
+    text-decoration: none;
   }
 
 
