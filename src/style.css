@@ -118,7 +118,8 @@ html, body {
 /*Twilight Market Intro*/
 .TwilightMarket {
     background-color: rgb(94, 74, 94);
-    height: 50vw;
+    height: 45vw;
+    overflow: hidden;
 }
 
 .image-stack {
@@ -500,6 +501,7 @@ html, body {
 .operationSpyfx {
     height: 45vw;
     background-color: black;
+    overflow: hidden;
 }
 
 .image-stack-spy {
@@ -1070,6 +1072,7 @@ html, body {
     font-size: 5vw;
     text-align: right;
     margin-right: 5vw;
+    
   }
 
   .contacttext {

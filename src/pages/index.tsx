@@ -215,13 +215,12 @@ const IndexPage: React.FC<PageProps> = () => {
   }
 
   function reasoning() {
-    var s ="OPERATION: Spyfx is a dance team I directed in Spring 2023. The theme was SPY x FAMILY and I wanted to promote my team. I was very unhappy with a normal google doc syllabus, so instead I created a fully interactive website. This included a password request screen and a similar scrolling text. I wanted every dancer who joined my team to be excited and this was very successful."
+    var s ="OPERATION: Spyfx is a dance team I directed in Spring 2023. I wanted to promote my team and I was very unhappy with a traditional google doc syllabus. Instead I created a fully interactive website. This included a password request screen and a similar scrolling text. I wanted every dancer who joined my team to be excited from the second they opened the welcome email."
     var start = 140
     var pause1 = 59
-    var pause2 = 119
-    var pause3 = 173
-    var pause4 = 223
-    var pause5 = 293
+    var pause2 = 150
+    var pause3 = 197
+    var pause4 = 267
     var len = s.length
     if(count < start) {
       return ""
@@ -241,12 +240,8 @@ const IndexPage: React.FC<PageProps> = () => {
       return s.substring(0, count - start - delay * 3 + 1)
     }else if (count >= start + pause4 + delay * 3 && count < start + pause4 + delay * 4) {
       return s.substring(0, pause4)
-    }else if (count >= start + pause4 + delay * 4 && count < start + delay * 4 + pause5) {
-      return s.substring(0, count - start - delay * 4 + 1)
-    }else if (count >= start + pause5 + delay * 4 && count < start + pause5 + delay * 5) {
-      return s.substring(0, pause5)
     }else {
-      return s.substring(0, Math.min(len, count - start - delay * 5))
+      return s.substring(0, Math.min(len, count - start - delay * 4))
     }
   }
 
@@ -411,16 +406,16 @@ const IndexPage: React.FC<PageProps> = () => {
                   <div className = "finishedanswer"> HAA! No. It's a very much WIP. We are recently free so ...</div>
                 )}
                 {others && (
-                  <div className = "otheranswer">Kenneth's friend Noah Dilworth is the other programmer!</div>
+                  <div className = "otheranswer">Noah Dilworth is the other programmer!</div>
                 )}
                 {engine && (
-                  <div className = "engineanswer">This game is built using the Godo game engine</div>
+                  <div className = "engineanswer">This game is built using the Godot game engine</div>
                 )}
   
                 {options && (
                   <React.Fragment>
                       <button className = "what" onClick={handleWhat}>What is the Twilight Market?</button>
-                      <button className = "work" onClick={handleWork}>What did Kenneth Do?</button>
+                      <button className = "work" onClick={handleWork}>What did Kenneth do?</button>
                       <button className = "artist" onClick={handleArtist}>Who drew the Art?</button>
                       <button className = "finsihed" onClick={handleFinished}>Is it done?</button>
                       <button className = "others" onClick={handleOther}>Who else is working on this project?</button>
@@ -477,9 +472,9 @@ const IndexPage: React.FC<PageProps> = () => {
                     choreo that my Co-directors and I created. Our team was the largest dance team for the semester, with a total of 52 dancers. 
                     <br></br> 
                     <br></br>
-                    One of the main reasons I wanted to direct a dance team was I was always disappointed with every dance team aside from my first one.
+                    One of the reasons I wanted to direct was that I was always disappointed with every dance team aside from my first one.
                     I went in with the goal of creating an experience that would rival or surpass a dancer’s first team experience. In addition, I wanted
-                    to re-introduce break dancing into the Berkeley Dance Community since covid killed the style at  UC Berkeley.
+                    to re-introduce break dancing into the Berkeley Dance Community since covid killed the style at UC Berkeley.
                     <br></br>
                     <br></br>
                     <div className="ogWebsite"> <a href="https://tinyurl.com/spyfx">Original Website</a></div>
@@ -539,9 +534,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <br></br>
               <br></br>
               My partner, Cynthia Xiong, pitched the concept and took responsibility for modeling and skinning all other assets. 
-              Additionally, she handled the coloring, shading, and lighting of every asset. We did have three other members, however they went mia and 
-              contributed almost nothing into the final animation.    
-              
+              Additionally, she handled the coloring, shading, and lighting of every asset.
               </div>
               <div className="inkframe"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/BCw64MGOHVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
             </div>
