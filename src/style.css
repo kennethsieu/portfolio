@@ -1058,7 +1058,7 @@ html, body {
   /* Contact */
   .Contact {
     overflow: hidden;
-    height: 45vw;
+    height: 35vw;
     background: linear-gradient(45deg, black,  white) ;
     background-size: 300% 300%;
     flex: start;

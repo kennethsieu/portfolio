@@ -543,7 +543,8 @@ const IndexPage: React.FC<PageProps> = () => {
             <div className="contacttitle">Contact Me!</div>
             <div className="contacttext"> Email: kennethsieu14@gmail.com</div>
             <div className="contacttext"> Phone Number: 510-325-8022</div>
-            <div className="contacttext"> Resume: <a className="resume" href="https://docs.google.com/document/d/1D6ZAx_-ToEZc6_llPcp2o8FICQZRzxu7/edit?usp=sharing&ouid=108128170449060245009&rtpof=true&sd=true" > View</a></div>
+            <div className="contacttext"><a className="resume" href="https://docs.google.com/document/d/1D6ZAx_-ToEZc6_llPcp2o8FICQZRzxu7/edit?usp=sharing&ouid=108128170449060245009&rtpof=true&sd=true">Resume </a></div>
+            <div className="contacttext"><a className="resume" href="https://www.linkedin.com/in/kenneth-sieu/">LinkedIn</a></div>
           </div>
         </div>
       </body>
