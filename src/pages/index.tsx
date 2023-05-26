@@ -48,49 +48,11 @@ const IndexPage: React.FC<PageProps> = () => {
   const [count, setCount] = useState(0);
   const delay = 10;
   const [spyinterval, setSpyinterval] = useState<NodeJS.Timer>()
-  const [introinterval, setIntroInterval] = useState<NodeJS.Timer>()
-  const [cnt, setCnt] = useState(0)
   const [twilightHome, setHome] = useState<boolean>(true)
   const [glade, setGlade] = useState<boolean>(true)
 
   const [options, setOptions] = useState<boolean>(false)
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCnt(cnt => cnt + 1);
-    }, 25);
-    setIntroInterval(interval)
-    return () => clearInterval(interval);
-  }, []);
-
-  function myintro() {
-    var s = "As of Spring 2023, I am a UC Berkeley graduate with a degree in Computer Science. My areas of expertise and passion lie in Game and Web development. I thoroughly enjoy the process of creating new projects and exploring innovative ideas."
-    var start = 30
-    var pause1 = 18
-    var pause2 = 81
-    var pause3 = 148
-    var len = s.length
-    if(cnt > 400) {
-      clearInterval(introinterval)
-    }
-    if(cnt < start) {
-      return ""
-    } else if (cnt >= start && cnt < start + pause1) {
-      return s.substring(0, cnt - start + 1)
-    } else if(cnt >= start + pause1 && cnt < start + pause1 + delay) {
-      return s.substring(0, pause1)
-    } else if(cnt >= start + pause1 + delay && cnt < start + delay + pause2) {
-      return s.substring(0, cnt - start - delay + 1)
-    } else if (cnt >= start + pause2 + delay && cnt < start + pause2 + delay * 2) {
-      return s.substring(0, pause2)
-    }else if (cnt >= start + pause2 + delay * 2 && cnt < start + delay * 2 + pause3) {
-      return s.substring(0, cnt - start - delay * 2 + 1)
-    }else if (cnt >= start + pause3 + delay * 2 && cnt < start + pause3 + delay * 3) {
-      return s.substring(0, pause3)
-    }else {
-      return s.substring(0, Math.min(len, cnt - start - delay * 3))
-    }
-  }
 
   function handleClickHere() {
     setHome(false)
@@ -316,18 +278,11 @@ const IndexPage: React.FC<PageProps> = () => {
           <div ><a className="navlink"href="#spy">Operation: Spyfx</a></div>
           <div ><a className="navlink"href="#glade">Glade of the Gray</a></div>
           <div ><a className="navlink"href="#ink">Ink</a></div>
-          <div ><a className="navlink"href="#contact">Contact Me</a></div>
+          <div ><Link className="navLink" to="/about">About</Link></div>
         </div>
         <div className="overLayer">
-          <div className="Introduction">
-            <img className = "kennethpng" src={kenneth}/>
-            <div className = "introText">
-              <div className="hello"> <b>Hi, I'm Kenneth</b></div>
-              <div className="intro"> {myintro()}</div>
-            </div>
-          </div>
           <div className="demoReel" id = "demo">
-              <div className="demoReelTitle"> <b>Demo Reel</b></div>
+              <div className="demoReelTitle"> <b>Kenneth's Demo Reel</b></div>
               <div className="iframe">
                 <iframe width = "100%" height="100%" src="https://www.youtube.com/embed/nOY0OR7M4W8" 
                 title="YouTube video player" frameborder="0" 
@@ -538,13 +493,6 @@ const IndexPage: React.FC<PageProps> = () => {
               </div>
               <div className="inkframe"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/BCw64MGOHVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
             </div>
-          </div>
-          <div className="Contact" id = "contact">
-            <div className="contacttitle">Contact Me!</div>
-            <div className="contacttext"> Email: kennethsieu14@gmail.com</div>
-            <div className="contacttext"> Phone Number: 510-325-8022</div>
-            <div className="contacttext"><a className="resume" href="https://docs.google.com/document/d/1D6ZAx_-ToEZc6_llPcp2o8FICQZRzxu7/edit?usp=sharing&ouid=108128170449060245009&rtpof=true&sd=true">Resume </a></div>
-            <div className="contacttext"><a className="resume" href="https://www.linkedin.com/in/kenneth-sieu/">LinkedIn</a></div>
           </div>
         </div>
       </body>

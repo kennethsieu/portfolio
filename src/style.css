@@ -4,7 +4,7 @@ html, body {
     padding: 0;
 }
 
-.buttun {
+.button {
   cursor: pointer;
 }
 .overLayer {
@@ -46,13 +46,42 @@ html, body {
 /* Introduction Page */
 .Introduction {
     background: linear-gradient(45deg, #2b2929,#CD8B94) ;
-    display: flex;
     flex-direction: horizontal;
     background-size: 300% 300%;
-    flex: start;
-    padding: 2vw;
     animation: flow 10s ease-in-out infinite;
 }
+
+.about {
+  display: flex;
+  flex: start;
+  padding: 2vw;
+  justify-content: space-evenly;
+  letter-spacing: .05em;
+}
+
+.contacttitle {
+  font-family: 'Andika', sans-serif;
+  color: #FAF9F6;
+  font-size: 3vw;
+  text-align: left;
+  margin-right: 5vw;
+  padding-bottom: 2vw;
+  font-weight: 600;
+  
+}
+
+.contacttext {
+  font-family: 'Andika', sans-serif;
+  color: #FAF9F6;
+  font-size: 1.5vw;
+  font-weight: 600;
+  padding-left: 5vw;
+}
+
+.resume:link {
+  text-decoration: none;
+}
+
 
 @keyframes flow {
   0%, 100% {
@@ -63,33 +92,30 @@ html, body {
   }
 }
 
-
-
-
 .kennethpng {
     width: 28vw;
-    margin-right: 5vw;
   }
 
 .introText {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding-left: 3vw;
 }
 
 .hello {
     font-family: 'Andika', sans-serif;
     color: #FAF9F6;
-    font-size: 6vw;
-
+    font-size: 3vw;
+    padding-bottom: 2vw;
 }
 
 .intro {
     font-family: 'Andika', sans-serif;
     color: #FAF9F6;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 600;
-    height: 25vw;
+    padding-left: 5vw;
 }
 
 /* Demo Reel */
@@ -98,7 +124,6 @@ html, body {
     height: 45vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -106,6 +131,8 @@ html, body {
     font-family: 'Andika', sans-serif;
     color: #FAF9F6;
     font-size: 4vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
 
 }
 
@@ -1055,36 +1082,6 @@ html, body {
     margin-right: 3vw;
   }
 
-  /* Contact */
-  .Contact {
-    overflow: hidden;
-    height: 35vw;
-    background: linear-gradient(45deg, black,  white) ;
-    background-size: 300% 300%;
-    flex: start;
-    padding: 2vw;
-    animation: flow 20s ease-in-out infinite;
-  }
-
-  .contacttitle {
-    font-family: 'Andika', sans-serif;
-    color: #FAF9F6;
-    font-size: 5vw;
-    text-align: right;
-    margin-right: 5vw;
-    
-  }
-
-  .contacttext {
-    font-family: 'Andika', sans-serif;
-    color: #FAF9F6;
-    font-size: 3vw;
-    margin-left: 5vw;
-  }
-
-  .resume:link {
-    text-decoration: none;
-  }
 
 
 
