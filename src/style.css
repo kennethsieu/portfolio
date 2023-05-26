@@ -23,6 +23,11 @@ html, body {
   text-decoration: none
 }
 
+.navlink:link {
+  color: #FAF9F6;
+  text-decoration: none
+}
+
 .navlink:hover {
   color: #0d98ba
 }
