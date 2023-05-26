@@ -278,7 +278,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <div ><a className="navlink"href="#spy">Operation: Spyfx</a></div>
           <div ><a className="navlink"href="#glade">Glade of the Gray</a></div>
           <div ><a className="navlink"href="#ink">Ink</a></div>
-          <div ><Link className="navLink" to="/about">About</Link></div>
+          <div ><Link className="navlink" to="/about">About</Link></div>
         </div>
         <div className="overLayer">
           <div className="demoReel" id = "demo">

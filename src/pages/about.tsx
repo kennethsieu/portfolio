@@ -47,7 +47,7 @@ const About: React.FC<PageProps> = () => {
       <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"></link>
       <body>
         <div className="navbar">
-          <div ><Link className="navLink" to="/">Works</Link></div>
+          <div ><Link className="navlink" to="/">Works</Link></div>
         </div>
         <div className="overLayer">
           <div className="Introduction">
