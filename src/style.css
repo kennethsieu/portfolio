@@ -200,37 +200,79 @@ html, body {
 }
 
 .shimmer1 {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    z-index: 5;
-    animation: shimmerframes .25s 0s infinite;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  z-index: 5;
+  animation: shimmerframes .25s 0s infinite;
 }
 
 .twilightbutton {
-  width: 20vw;
-  height: 5vw;
-  opacity: 0%;
-  position: absolute;
+width: 20vw;
+height: 5vw;
+opacity: 0%;
+position: absolute;
 }
 
 .button_container {
-  grid-row: 21 / span 2;
-  grid-column: 9 / span 4;
-  z-index: 7;
+grid-row: 21 / span 2;
+grid-column: 9 / span 4;
+z-index: 7;
 }
 
 .button_container:hover {
-  transform: translateY(-1vw);
+transform: translateY(-1vw);
 }
 
 .clickhere {
-  width: 20vw;
+width: 20vw;
+}
+/* twilight transition */
+
+@keyframes transfog {
+  0% {transform: translatex(-90vw);
+      opacity: 100%;}
+  100% {transform: translatex(100vw);
+      opacity: 100%;}
 }
 
-/* MacCollie interaction */
-.macCollie {
-    background-color: rgb(94, 74, 94);
+.transfog1 {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  z-index: 15;
+  animation: transfog 5s linear forwards;
 }
+
+.transfog2 {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  z-index: 15;
+  animation: transfog 4s linear reverse forwards;
+}
+
+.transfog3 {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  z-index: 15;
+  animation: transfog 3s linear forwards;
+}
+
+.transfog4 {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  z-index: 15;
+  animation: transfog 6s linear forwards;
+}
+
+.transfog5 {
+  grid-column: 1 / -1;
+  grid-row: 9;
+  z-index: 15;
+  animation: transfog 5s linear reverse forwards;
+}
+
+
+
+/* MacCollie interaction */
 
 @keyframes idle {
     0% {transform:translateY(0)}
@@ -248,21 +290,16 @@ html, body {
 }
 
 @keyframes talking {
-    0% {transform: translateY(-4vw)}
-    100% {transform: translateY(-3.25vw)}
+    0% {transform: translateY(0vw)}
+    100% {transform: translateY(1vw)}
 }
+
 
 @keyframes angrytalking {
-    0% {transform: translateY(-2vw)}
-    100% {transform: translateY(-1.25vw)}
+    0% {transform: translateY(0vw)}
+    100% {transform: translateY(1.25vw)}
 }
 
-.image-stack-mcCollie {
-    display: grid;
-    position: relative;
-    grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: repeat(24, 2vw);
-}
 
 .bod {
     grid-column: 1 / -1;
@@ -271,25 +308,29 @@ html, body {
     animation: idle 2.5s linear alternate infinite;
 }
 
+.headsprite {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  z-index: 6;
+}
+
 .jaw {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     z-index: 5;
-    animation: idleface 2s linear alternate infinite;
 }
 
 .angryjaw {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     z-index: 5;
-    animation: idleangryface 2s linear alternate infinite;
 }
 
 .jawtalking {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     z-index: 5;
-    animation: talking .2s linear alternate infinite;
+    animation: talking .25s linear alternate infinite;
 }
 
 .angryjawtalking {
@@ -303,6 +344,7 @@ html, body {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     z-index: 5;
+    display: grid;
     animation: idleface 2s linear alternate infinite;
 }
 
@@ -310,6 +352,7 @@ html, body {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     z-index: 5;
+    display: grid;
     animation: idleangryface 2s linear alternate infinite;
 }
 
@@ -431,6 +474,10 @@ html, body {
     to { width: 100% }
   }
 
+@keyframes mcCollieIntro {
+
+}
+
 .McCollieIntro {
     grid-column: 1 / span 14;
     grid-row: 21 / span 2;
@@ -442,7 +489,6 @@ html, body {
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
-    animation: typing 4s steps(80, end);
 }
 
 .whatanswer {
@@ -456,7 +502,6 @@ html, body {
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
-    animation: typing 4s steps(80, end);
 }
 
 .workanswer {
@@ -470,7 +515,6 @@ html, body {
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
-    animation: typing 4s steps(80, end);
 }
 
 .artistanswer {
@@ -484,7 +528,6 @@ html, body {
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
-    animation: typing 4s steps(80, end);
 }
 
 .finishedanswer {
@@ -498,7 +541,6 @@ html, body {
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
-    animation: typing 4s steps(80, end);
 }
 
 .otheranswer {
@@ -512,7 +554,6 @@ html, body {
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
-    animation: typing 4s steps(80, end);
 }
 
 .engineanswer {
@@ -526,7 +567,6 @@ html, body {
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
-    animation: typing 4s steps(80, end);
 }
 
 /* Operation: Spyfx */

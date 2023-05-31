@@ -2,6 +2,7 @@ import React, { useState, useEffect, ChangeEvent, } from "react";
 import type { HeadFC, PageProps } from "gatsby"
 import '../style.css'
 import { Link } from "gatsby"
+import Typewriter from "typewriter-effect";
 import kenneth from "../images/kenneth.jpg"
 import TwilightFrame from "../images/TwilightFrame.png"
 import fog1 from "../images/fog1.png"
@@ -29,7 +30,8 @@ import title from "../images/title_card.png"
 import gladebutton from "../images/gladebutton.png"
 import select from "../images/select.png"
 import clickhere from "../images/clickhere.png"
-import resume from "../KennethSieuResume.pdf"
+import transFog from "../images/TransFog.png"
+import transFog2 from "../images/transfog2.png"
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -50,12 +52,15 @@ const IndexPage: React.FC<PageProps> = () => {
   const [spyinterval, setSpyinterval] = useState<NodeJS.Timer>()
   const [twilightHome, setHome] = useState<boolean>(true)
   const [glade, setGlade] = useState<boolean>(true)
-
   const [options, setOptions] = useState<boolean>(false)
+  const [trans, setTrans] = useState<boolean>(false)
 
 
   function handleClickHere() {
-    setHome(false)
+
+    setTrans(true)
+    setTimeout(() => {
+      setHome(false); }, 2500);
   }
 
   function handleClick() {
@@ -63,7 +68,7 @@ const IndexPage: React.FC<PageProps> = () => {
     setCollie(true);
     setExpress(2);
     setTimeout(() => {
-      setExpress(1), setOptions(true); }, 3750);
+      setExpress(1), setOptions(true); }, 4000);
   }
 
   function handleWhat() {
@@ -76,7 +81,7 @@ const IndexPage: React.FC<PageProps> = () => {
     setWhat(true);
     setExpress(2)
     setTimeout(() => {
-      setExpress(1); }, 3750);
+      setExpress(1); }, 5000);
   }
 
   function handleWork() {
@@ -89,7 +94,7 @@ const IndexPage: React.FC<PageProps> = () => {
     setWork(true);
     setExpress(4)
     setTimeout(() => {
-      setExpress(3); }, 3750);
+      setExpress(3); }, 4000);
   }
 
   function handleArtist() {
@@ -102,7 +107,7 @@ const IndexPage: React.FC<PageProps> = () => {
     setArtist(true);
     setExpress(2)
     setTimeout(() => {
-      setExpress(1); }, 3750);
+      setExpress(1); }, 5000);
   }
 
   function handleFinished() {
@@ -115,7 +120,7 @@ const IndexPage: React.FC<PageProps> = () => {
     setFinished(true);
     setExpress(4)
     setTimeout(() => {
-      setExpress(3); }, 3750);
+      setExpress(3); }, 4000);
   }
 
   function handleOther() {
@@ -128,7 +133,7 @@ const IndexPage: React.FC<PageProps> = () => {
     setOthers(true);
     setExpress(2)
     setTimeout(() => {
-      setExpress(1); }, 3750);
+      setExpress(1); }, 3000);
   }
 
   function handleEngine() {
@@ -141,7 +146,7 @@ const IndexPage: React.FC<PageProps> = () => {
     setEngine(true);
     setExpress(4)
     setTimeout(() => {
-      setExpress(3); }, 3750);
+      setExpress(3); }, 3000);
   }
 
   function handleSpy() {
@@ -159,7 +164,7 @@ const IndexPage: React.FC<PageProps> = () => {
     setInfo(true)
   }
 
-
+  /* spy functions */
   function greeting() {
     var s = "Good morning or perhaps good evening recruiter"
     var start = 80
@@ -291,54 +296,65 @@ const IndexPage: React.FC<PageProps> = () => {
               </div>
           </div>
           <div className="TwilightMarket" id = "twil">
-            {twilightHome && (
-              <div className="image-stack">
-              <div className="shimmer1"><img className = "twilightimg" src={shimmer_1}/></div>
-              <div className="main"><img className = "twilightimg" src={TwilightFrame}/></div>
-              <div className="fog1"> <img className = "twilightimg" src={fog1}/></div>
-              <div className="fog2"> <img className = "twilightimg" src={fog2}/></div>
-              <div className="fog3"> <img className = "twilightimg" src={fog3}/></div>
-              <div className="button_container">
-                <button className="twilightbutton" onClick={handleClickHere}> </button>
-                <img className = "clickhere" src={clickhere}/>
-              </div>
-            </div>
-            )}
-            {!twilightHome && (
-              <div className="macCollie">
-              <div className="image-stack-mcCollie">
-                <div className="main"> <img className = "twilightimg" src={dialogue_ui}/></div>
-                <div className="main"> <img className = "twilightimg" src={trees}/></div>
-                <div className="fog1"> <img className = "twilightimg" src={mcCollieFog}/></div>
-                <div className="fog2"> <img className = "twilightimg" src={mcCollieFog2}/></div>
-                {express == 1 && (
+            <div className="image-stack">
+              {twilightHome && (
+                <React.Fragment>
+                  <div className="shimmer1"><img className = "twilightimg" src={shimmer_1}/></div>
+                  <div className="main"><img className = "twilightimg" src={TwilightFrame}/></div>
+                  <div className="fog1"> <img className = "twilightimg" src={fog1}/></div>
+                  <div className="fog2"> <img className = "twilightimg" src={fog2}/></div>
+                  <div className="fog3"> <img className = "twilightimg" src={fog3}/></div>
+                  <div className="button_container">
+                  <button className="twilightbutton" onClick={handleClickHere}> </button>
+                    <img className = "clickhere" src={clickhere}/>
+                  </div>
+                </React.Fragment>
+              )}
+              {trans && (
+                <React.Fragment>
+                  <div className="transfog1"> <img className = "twilightimg" src={fog1}/></div>
+                  <div className="transfog2"> <img className = "twilightimg" src={fog2}/></div>
+                  <div className="transfog3"> <img className = "twilightimg" src={fog3}/></div>
+                  <div className="transfog4"> <img className = "twilightimg" src={transFog}/></div>
+                  <div className="transfog5"> <img className = "twilightimg" src={transFog2}/></div>
+                </React.Fragment>
+              )}
+              {!twilightHome && (
+                <React.Fragment>
+                  <div className="main"> <img className = "twilightimg" src={dialogue_ui}/></div>
+                  <div className="main"> <img className = "twilightimg" src={trees}/></div>
+                  <div className="fog1"> <img className = "twilightimg" src={mcCollieFog}/></div>
+                  <div className="fog2"> <img className = "twilightimg" src={mcCollieFog2}/></div>
+                {(express == 1 || express == 2) && (
                   <React.Fragment>
                     <div className ="bod"><img className = "twilightimg" src={bod}/> </div>
-                    <div className ="jaw"><img className = "twilightimg" src={jaw}/> </div>
-                    <div className ="head"><img className = "twilightimg" src={head}/> </div>
+                    <div className ="head">
+                      <div className="headsprite"><img className = "twilightimg" src={head}/> </div>
+                      {express == 1 && (
+                        <div className ="jaw"><img className = "twilightimg" src={jaw}/> </div>
+                      )}
+                      {express == 2 && (
+                        <div className ="jawtalking"><img className = "twilightimg" src={jaw}/> </div>
+                      )}
+                      
+                    </div>
                   </React.Fragment>
                 )}
-                {express == 2 && (
-                  <React.Fragment>
-                    <div className ="bod"><img className = "twilightimg" src={bod}/> </div>
-                    <div className ="jawtalking"><img className = "twilightimg" src={jaw}/> </div>
-                    <div className ="head"><img className = "twilightimg" src={head}/> </div>
-                  </React.Fragment>
-                )}
-                {express == 3 && (
-                  <React.Fragment>
-                    <div className ="bod"><img className = "twilightimg" src={angryBod}/> </div>
-                    <div className ="angryjaw"><img className = "twilightimg" src={angryJaw}/> </div>
-                    <div className ="angryhead"><img className = "twilightimg" src={angryHead}/> </div>
-                  </React.Fragment>
-                )}
-                {express == 4 && (
+                {(express == 3 || express == 4) && (
                   <React.Fragment>
                     <div className ="bod"><img className = "twilightimg" src={angryBod}/> </div>
-                    <div className ="angryjawtalking "><img className = "twilightimg" src={angryJaw}/> </div>
-                    <div className ="angryhead"><img className = "twilightimg" src={angryHead}/> </div>
+                    <div className ="angryhead">
+                      <div className="headsprite"><img className = "twilightimg" src={angryHead}/></div>
+                      {express == 3 && (
+                        <div className ="angryjaw"><img className = "twilightimg" src={angryJaw}/> </div>
+                      )}                
+                      {express == 4 && (
+                          <div className ="angryjawtalking "><img className = "twilightimg" src={angryJaw}/> </div>
+                      )}    
+                    </div>
                   </React.Fragment>
                 )}
+
                 {start && (
                   <React.Fragment>
                     <button className = "startbutton" onClick={handleClick}>Who are you???</button>
@@ -346,25 +362,93 @@ const IndexPage: React.FC<PageProps> = () => {
                   </React.Fragment>
                 )}
                 {mcCollie && (
-                  <div className = "McCollieIntro"> Hello Human. Name's McCollie. Welcome to the Twilight Market.</div>
+                  <div className = "McCollieIntro">
+                  <Typewriter
+                      options={{cursor: "", delay: 1,}}
+                      onInit={(typewriter) => {
+                        typewriter
+                            .typeString("Hello Human.")
+                            .pauseFor(250)
+                            .typeString(" Name's McCollie.")
+                            .pauseFor(250)
+                            .typeString(" Welcome to the Twilight Market.")
+                            .start();
+                        }}
+                    />
+                  </div>
                 )}
                 {what && (
-                  <div className = "whatanswer"> The Twilight Market is a Dark Fantasy Visual Novel started in 2021</div>
+                  <div className = "whatanswer"> 
+                    <Typewriter
+                      options={{cursor: "", delay: 1,}}
+                      onInit={(typewriter) => {
+                        typewriter
+                            .typeString("The Twilight Market is a Dark Fantasy Visual Novel started in 2021")
+                            .start();
+                        }}
+                    />
+                  </div>
                 )}
                 {work && (
-                  <div className = "workanswer">Kenneth worked on UI, dialogue, enviorments, rigging, animations, etc</div>
+                  <div className = "workanswer">
+                    <Typewriter
+                      options={{cursor: "", delay: 1,}}
+                      onInit={(typewriter) => {
+                        typewriter
+                            .typeString("Kenneth worked on UI, dialogue, enviorments, rigging, animations, etc")
+                            .start();
+                        }}
+                    /></div>
                 )}
                 {artist && (
-                  <div className = "artistanswer">My Buddy Calvin drew me! Check him out on instagram @calvin_beeman_weber </div>
+                  <div className = "artistanswer">
+                     <Typewriter
+                      options={{cursor: "", delay: 1,}}
+                      onInit={(typewriter) => {
+                        typewriter
+                            .typeString("My Buddy Calvin drew me!")
+                            .pauseFor(250)
+                            .typeString(" Check him out on instagram @calvin_beeman_weber")
+                            .start();
+                        }}
+                    /></div>
                 )}
                 {finished && (
-                  <div className = "finishedanswer"> HAA! No. It's a very much WIP. We are recently free so ...</div>
+                  <div className = "finishedanswer">
+                    <Typewriter
+                      options={{cursor: "", delay: 1,}}
+                      onInit={(typewriter) => {
+                        typewriter
+                            .typeString("HAA! No.")
+                            .pauseFor(250)
+                            .typeString(" It's a very much WIP.")
+                            .pauseFor(250)
+                            .typeString(" We are recently free so ...")
+                            .start();
+                        }}
+                    />
+                  </div>
                 )}
                 {others && (
-                  <div className = "otheranswer">Noah Dilworth is the other programmer!</div>
+                  <div className = "otheranswer">
+                  <Typewriter
+                      options={{cursor: "", delay: 1,}}
+                      onInit={(typewriter) => {
+                        typewriter
+                            .typeString("Noah Dilworth is the other programmer!")
+                            .start();
+                        }}
+                    /></div>
                 )}
                 {engine && (
-                  <div className = "engineanswer">This game is built using the Godot game engine</div>
+                  <div className = "engineanswer"><Typewriter
+                  options={{cursor: "", delay: 1,}}
+                  onInit={(typewriter) => {
+                    typewriter
+                        .typeString("This game is built using the Godot game engine")
+                        .start();
+                    }}
+                /></div>
                 )}
   
                 {options && (
@@ -377,9 +461,10 @@ const IndexPage: React.FC<PageProps> = () => {
                       <button className = "engine" onClick={handleEngine}>What engine was this made in?</button>
                   </React.Fragment>
                 )}
-              </div>
-            </div>
+                </React.Fragment>
             )}
+            </div>
+
           </div>
           <div className="operationSpyfx" id = "spy">
             <div className="image-stack-spy">
